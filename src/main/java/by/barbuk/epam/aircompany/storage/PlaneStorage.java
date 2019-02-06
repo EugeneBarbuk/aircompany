@@ -29,6 +29,7 @@ public class PlaneStorage implements Storage<Plane> {
             new MilitaryPlane("F-22", 1550, 13000, 11000, PlaneType.MilitaryType.FIGHTER),
             new MilitaryPlane("C-130 Hercules", 650, 5000, 110000, PlaneType.MilitaryType.TRANSPORT)
     );
+
     private PlaneStorage() {
 
     }
@@ -42,13 +43,18 @@ public class PlaneStorage implements Storage<Plane> {
     }
 
     @Override
-    public List<Plane> addPlane(Plane plane) {
+    public List<Plane> addPlaneToStorage(Plane plane) {
         planes.add(plane);
         LOGGER.info(planes);
         return planes;
 
     }
-    public List<Plane> getAllPlanesFromList (){
+
+    public List<Plane> getAllPlanesFromList() {
         return planes;
+    }
+
+    public void printPlaneListInLog() {
+        LOGGER.info(planes);
     }
 }
