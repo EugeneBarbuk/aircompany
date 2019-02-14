@@ -1,6 +1,6 @@
 package by.barbuk.epam.aircompany.finder;
 
-import by.barbuk.epam.aircompany.models.PlaneType;
+import by.barbuk.epam.aircompany.models.PlaneTypeEnum;
 import by.barbuk.epam.aircompany.planes.*;
 
 import java.util.Collection;
@@ -20,16 +20,17 @@ public class PlaneByTypeFinder {
 
 
     public List<Plane> findMilitaryPlanes(Collection<? extends Plane> planesList) {
-
         return planesList.stream().filter(plane -> plane instanceof MilitaryPlane).collect(Collectors.toList());
     }
 
     public List<MilitaryPlane> findTransportMilitaryPlanes(Collection<MilitaryPlane> militaryPlaneList) {
-        return militaryPlaneList.stream().filter(militaryPlane -> militaryPlane.getPlaneType()==(PlaneType.MilitaryType.TRANSPORT)).collect(Collectors.toList());
+        return militaryPlaneList.stream().filter(militaryPlane -> militaryPlane.getPlaneType() ==
+                (PlaneTypeEnum.MilitaryType.TRANSPORT)).collect(Collectors.toList());
     }
 
     public List<MilitaryPlane> findBomberMilitaryPlanes(Collection<MilitaryPlane> militaryPlaneList) {
-        return militaryPlaneList.stream().filter(militaryPlane -> militaryPlane.getPlaneType()==(PlaneType.MilitaryType.BOMBER)).collect(Collectors.toList());
+        return militaryPlaneList.stream().filter(militaryPlane -> militaryPlane.getPlaneType() ==
+                (PlaneTypeEnum.MilitaryType.BOMBER)).collect(Collectors.toList());
     }
 
 }

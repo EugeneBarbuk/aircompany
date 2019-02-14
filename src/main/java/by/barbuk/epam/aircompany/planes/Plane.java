@@ -1,5 +1,7 @@
 package by.barbuk.epam.aircompany.planes;
 
+import java.util.Comparator;
+import java.util.List;
 import java.util.Objects;
 
 public class Plane {
@@ -76,6 +78,6 @@ public class Plane {
 
     @Override
     public int hashCode() {
-        return Objects.hash(getPlaneModel(), getMaxPlaneSpeed(), getMaxPlaneFlightDistance(), getMaxPlaneLoadCapacity());
+        return Objects.hash(getPlaneModel(), getMaxPlaneSpeed(), getMaxPlaneFlightDistance(),getMaxPlaneLoadCapacity());
     }
 }

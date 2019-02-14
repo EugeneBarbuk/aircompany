@@ -1,25 +1,25 @@
 package by.barbuk.epam.aircompany.planes;
 
-import by.barbuk.epam.aircompany.models.PlaneType;
+import by.barbuk.epam.aircompany.models.PlaneTypeEnum;
 
 import java.util.Objects;
 
 public class ExperimentalPlane extends Plane {
 
-    private PlaneType.ExperimentalType planeType;
-    private PlaneType.SecurityType planeSecurityType;
+    private PlaneTypeEnum.ExperimentalType planeType;
+    private PlaneTypeEnum.SecurityType planeSecurityType;
 
-    public ExperimentalPlane(String planeModel, int maxPlaneSpeed, int maxPlaneFlightDistance, int maxPlaneLoadCapacity, PlaneType.ExperimentalType planeType, PlaneType.SecurityType planeSecurityType) {
+    public ExperimentalPlane(String planeModel, int maxPlaneSpeed, int maxPlaneFlightDistance, int maxPlaneLoadCapacity, PlaneTypeEnum.ExperimentalType planeType, PlaneTypeEnum.SecurityType planeSecurityType) {
         super(planeModel, maxPlaneSpeed, maxPlaneFlightDistance, maxPlaneLoadCapacity);
         this.planeType = planeType;
         this.planeSecurityType = planeSecurityType;
     }
 
-    public PlaneType.SecurityType getPlaneSecurityType() {
+    public PlaneTypeEnum.SecurityType getPlaneSecurityType() {
         return planeSecurityType;
     }
 
-    public void setPlaneSecurityType(PlaneType.SecurityType planeSecurityType) {
+    public void setPlaneSecurityType(PlaneTypeEnum.SecurityType planeSecurityType) {
         this.planeSecurityType = planeSecurityType;
     }
 
@@ -44,10 +44,12 @@ public class ExperimentalPlane extends Plane {
         return Objects.hash(super.hashCode(), planeType, getPlaneSecurityType());
     }
 
+
     @Override
     public String toString() {
         return "ExperimentalPlane{" +
-                "model='" + getPlaneModel() + '\'' +
-                '}';
+                "planeType=" + planeType +
+                ", planeSecurityType=" + planeSecurityType +
+                "} " + super.toString();
     }
 }

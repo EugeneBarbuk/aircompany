@@ -1,6 +1,6 @@
 package by.barbuk.epam.aircompany.storage;
 
-import by.barbuk.epam.aircompany.models.PlaneType;
+import by.barbuk.epam.aircompany.models.PlaneTypeEnum;
 import by.barbuk.epam.aircompany.planes.MilitaryPlane;
 import by.barbuk.epam.aircompany.planes.PassengerPlane;
 import by.barbuk.epam.aircompany.planes.Plane;
@@ -22,12 +22,12 @@ public class PlaneStorage implements Storage<Plane> {
             new PassengerPlane("Embraer 190", 870, 8100, 30800, 64),
             new PassengerPlane("Sukhoi Superjet 100", 870, 11500, 50500, 140),
             new PassengerPlane("Bombardier CS300", 920, 11000, 60700, 196),
-            new MilitaryPlane("B-1B Lancer", 1050, 21000, 80000, PlaneType.MilitaryType.BOMBER),
-            new MilitaryPlane("B-2 Spirit", 1030, 22000, 70000, PlaneType.MilitaryType.BOMBER),
-            new MilitaryPlane("B-52 Stratofortress", 1000, 20000, 80000, PlaneType.MilitaryType.BOMBER),
-            new MilitaryPlane("F-15", 1500, 12000, 10000, PlaneType.MilitaryType.FIGHTER),
-            new MilitaryPlane("F-22", 1550, 13000, 11000, PlaneType.MilitaryType.FIGHTER),
-            new MilitaryPlane("C-130 Hercules", 650, 5000, 110000, PlaneType.MilitaryType.TRANSPORT)
+            new MilitaryPlane("B-1B Lancer", 1050, 21000, 80000, PlaneTypeEnum.MilitaryType.BOMBER),
+            new MilitaryPlane("B-2 Spirit", 1030, 22000, 70000, PlaneTypeEnum.MilitaryType.BOMBER),
+            new MilitaryPlane("B-52 Stratofortress", 1000, 20000, 80000, PlaneTypeEnum.MilitaryType.BOMBER),
+            new MilitaryPlane("F-15", 1500, 12000, 10000, PlaneTypeEnum.MilitaryType.FIGHTER),
+            new MilitaryPlane("F-22", 1550, 13000, 11000, PlaneTypeEnum.MilitaryType.FIGHTER),
+            new MilitaryPlane("C-130 Hercules", 650, 5000, 110000, PlaneTypeEnum.MilitaryType.TRANSPORT)
     );
 
     private PlaneStorage() {

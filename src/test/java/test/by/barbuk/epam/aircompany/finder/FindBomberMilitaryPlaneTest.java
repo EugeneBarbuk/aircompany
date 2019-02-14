@@ -1,7 +1,7 @@
 package test.by.barbuk.epam.aircompany.finder;
 
 import by.barbuk.epam.aircompany.finder.PlaneByTypeFinder;
-import by.barbuk.epam.aircompany.models.PlaneType;
+import by.barbuk.epam.aircompany.models.PlaneTypeEnum;
 import by.barbuk.epam.aircompany.planes.MilitaryPlane;
 import org.testng.Assert;
 import org.testng.annotations.AfterClass;
@@ -17,8 +17,8 @@ public class FindBomberMilitaryPlaneTest {
 
     @BeforeClass
     public void fillPlaneList() {
-        planeList.add(new MilitaryPlane("B-1B Lancer", 1050, 21000, 80000, PlaneType.MilitaryType.BOMBER));
-        planeList.add(new MilitaryPlane("C-130 Hercules", 650, 5000, 110000, PlaneType.MilitaryType.TRANSPORT));
+        planeList.add(new MilitaryPlane("B-1B Lancer", 1050, 21000, 80000, PlaneTypeEnum.MilitaryType.BOMBER));
+        planeList.add(new MilitaryPlane("C-130 Hercules", 650, 5000, 110000, PlaneTypeEnum.MilitaryType.TRANSPORT));
     }
 
 
@@ -28,7 +28,7 @@ public class FindBomberMilitaryPlaneTest {
     }
 
     @Test
-    public void testBomberMilitaryPlane() {
+    public void testBomberMilitaryPlane(){
         String expected = "B-1B Lancer";
         String actual = planeByTypeFinder.findBomberMilitaryPlanes(planeList).get(0).getPlaneModel();
         Assert.assertEquals(actual, expected);

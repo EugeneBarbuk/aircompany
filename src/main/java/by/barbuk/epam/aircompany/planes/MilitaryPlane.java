@@ -1,22 +1,22 @@
 package by.barbuk.epam.aircompany.planes;
 
-import by.barbuk.epam.aircompany.models.PlaneType;
+import by.barbuk.epam.aircompany.models.PlaneTypeEnum;
 
 import java.util.Objects;
 
 public class MilitaryPlane extends Plane {
-    private PlaneType.MilitaryType planeType;
+    private PlaneTypeEnum.MilitaryType planeType;
 
-    public MilitaryPlane(String planeModel, int maxPlaneSpeed, int maxPlaneFlightDistance, int maxPlaneLoadCapacity, PlaneType.MilitaryType planeType) {
+    public MilitaryPlane(String planeModel, int maxPlaneSpeed, int maxPlaneFlightDistance, int maxPlaneLoadCapacity, PlaneTypeEnum.MilitaryType planeType) {
         super(planeModel, maxPlaneSpeed, maxPlaneFlightDistance, maxPlaneLoadCapacity);
         this.planeType = planeType;
     }
 
-    public PlaneType.MilitaryType getPlaneType() {
+    public PlaneTypeEnum.MilitaryType getPlaneType() {
         return planeType;
     }
 
-    public void setPlaneType(PlaneType.MilitaryType planeType) {
+    public void setPlaneType(PlaneTypeEnum.MilitaryType planeType) {
         this.planeType = planeType;
     }
 

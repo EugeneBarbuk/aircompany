@@ -1,7 +1,7 @@
 package test.by.barbuk.epam.aircompany.finder;
 
 import by.barbuk.epam.aircompany.finder.PlaneByTypeFinder;
-import by.barbuk.epam.aircompany.models.PlaneType;
+import by.barbuk.epam.aircompany.models.PlaneTypeEnum;
 import by.barbuk.epam.aircompany.planes.ExperimentalPlane;
 import by.barbuk.epam.aircompany.planes.MilitaryPlane;
 import by.barbuk.epam.aircompany.planes.PassengerPlane;
@@ -21,8 +21,8 @@ public class FindMilitaryPlaneTest {
     @BeforeClass
     public void fillPlaneList() {
         planeList.add(new PassengerPlane("Boeing-737", 900, 12000, 60500, 164));
-        planeList.add(new MilitaryPlane("B-1B Lancer", 1050, 21000, 80000, PlaneType.MilitaryType.BOMBER));
-        planeList.add(new ExperimentalPlane("Bell X-14", 277, 482, 500, PlaneType.ExperimentalType.HIGH_ALTITUDE, PlaneType.SecurityType.SECRET));
+        planeList.add(new MilitaryPlane("B-1B Lancer", 1050, 21000, 80000, PlaneTypeEnum.MilitaryType.BOMBER));
+        planeList.add(new ExperimentalPlane("Bell X-14", 277, 482, 500, PlaneTypeEnum.ExperimentalType.HIGH_ALTITUDE, PlaneTypeEnum.SecurityType.SECRET));
     }
 
 
